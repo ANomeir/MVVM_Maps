@@ -20,7 +20,7 @@ object AppModule {
         return  Room.databaseBuilder(
             app,
             ParkingSpotDatabase::class.java,
-            "Parking_Spot.db"
+            "parking_spots.db"
         ).build()
     }
 

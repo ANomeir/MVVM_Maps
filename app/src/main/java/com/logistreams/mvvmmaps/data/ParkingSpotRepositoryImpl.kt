@@ -5,9 +5,9 @@ import com.logistreams.mvvmmaps.domain.repository.ParkingSpotRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 
-class ParkingSpotRepositoryImpl (
+class ParkingSpotRepositoryImpl(
     private val dao: ParkingSpotDao
-        ): ParkingSpotRepository{
+) : ParkingSpotRepository {
     override suspend fun insertParkingSpot(spot: ParkingSpot) {
         dao.insertParkingSpot(spot.toParkingSpotEntity())
     }
@@ -17,8 +17,8 @@ class ParkingSpotRepositoryImpl (
     }
 
     override fun getParkingSpots(): Flow<List<ParkingSpot>> {
-        return dao.getParkingSpots().map {
-            spots -> spots.map { it.toParkingSpot() }
+        return dao.getParkingSpots().map { spots ->
+            spots.map { it.toParkingSpot() }
         }
     }
 }

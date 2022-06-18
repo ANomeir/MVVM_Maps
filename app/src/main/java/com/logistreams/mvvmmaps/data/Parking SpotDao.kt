@@ -12,7 +12,7 @@ interface ParkingSpotDao {
     @Delete
     suspend  fun deleteParkingSpot(spot: ParkingSpotEntity)
 
-    @Query("SELECT * FROM ParkingSpotEntity")
+    @Query("SELECT * FROM parkingspotentity")
     fun getParkingSpots(): Flow<List<ParkingSpotEntity>>
 
 }

@@ -9,6 +9,6 @@ import androidx.room.RoomDatabase
     version = 1
 )
 
-abstract class ParkingSpotDatabase : RoomDatabase(){
-abstract val dao:ParkingSpotDao
+abstract class ParkingSpotDatabase : RoomDatabase() {
+    abstract val dao: ParkingSpotDao
 }
